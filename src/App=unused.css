@@ -1,0 +1,241 @@
+/* General app container */
+.app-container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 1.2em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f7fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 26px;
+  color: #333;
+}
+
+/* Movie Form styles */
+.movie-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em;
+  margin-bottom: 1.5em;
+  align-items: center;
+}
+
+.movie-form input {
+  flex: 1 1 120px;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.15s ease-in-out;
+}
+
+.movie-form input:focus {
+  outline-color: #2244dd;
+}
+
+.movie-form button {
+  padding: 0.6em 1.5em;
+  background: #2244dd;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.movie-form button:hover,
+.movie-form button:focus {
+  background: #1b35b0;
+  outline: none;
+}
+
+/* Filter and sort section */
+.filter-sort-row {
+  display: flex;
+  gap: 1.2em;
+  margin-bottom: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-sort-row label {
+  font-size: 1em;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.filter-sort-row select {
+  margin-left: 0.5em;
+  font-size: 1em;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  outline-offset: 2px;
+  outline-color: transparent;
+  transition: outline-color 0.15s ease-in-out;
+}
+
+.filter-sort-row select:focus {
+  outline-color: #2244dd;
+}
+
+/* Movie list container */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+/* Individual movie item */
+.movie-item {
+  display: flex;
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(67, 61, 150, 0.09);
+  padding: 1em;
+  max-width: 360px;
+  min-width: 260px;
+  gap: 1em;
+  align-items: start;
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+}
+
+.movie-item.watched {
+  background: #e3fde3;
+}
+
+/* Movie poster image */
+.movie-poster {
+  width: 90px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie details */
+.movie-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Movie title */
+.movie-details h3 {
+  margin: 0 0 0.3em;
+  font-size: 1.2em;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+/* Watched icon! */
+.watched-icon {
+  font-size: 1.2em;
+  margin-left: 0.4em;
+  color: #048848;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+/* Category and watched label */
+.category {
+  font-size: 0.9em;
+  color: #273;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.watched-label {
+  color: #055;
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  font-weight: 600;
+}
+
+/* Star rating container */
+.stars {
+  margin: 0.3em 0 0.8em;
+}
+
+.stars span {
+  font-size: 1.3em;
+  margin-right: 2px;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+/* Buttons */
+.movie-details button {
+  padding: 0.35em 0.95em;
+  font-size: 0.95em;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+  margin-right: 0.6em;
+}
+
+.movie-details button:focus {
+  outline: 2px solid #2244dd;
+  outline-offset: 2px;
+}
+
+.movie-details button:hover {
+  filter: brightness(0.9);
+}
+
+/* Mark as Watched button */
+.movie-details>button:first-of-type {
+  background: #19a85b;
+  color: #fff;
+}
+
+.movie-details>button:first-of-type:hover {
+  background: #158641;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #d32f2f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #b71c1c;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+
+  .movie-form,
+  .filter-sort-row {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .movie-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-item {
+    min-width: 95vw;
+    max-width: 95vw;
+  }
+}
